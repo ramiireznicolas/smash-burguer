@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +8,14 @@
 body {
   padding: 5px;
   text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+body .d-block {
+  margin: auto;
 }
 
 body .wpp {
@@ -20,23 +30,34 @@ body .wpp {
           align-items: flex-start;
   margin: 20px;
   text-decoration: none;
-  background-color: white;
-  width: 51px;
-  height: 57px;
+  background-color: green;
+  width: 70px;
+  height: 70px;
   border-radius: 55%;
 }
 
 body .wpp .fa-whatsapp {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 4em;
-  color: green;
+  color: white;
   position: absolute;
+  margin: 3px 0px 3px 7px;
 }
 
 body h1 {
   margin: 3px;
+  font-family: 'Aboreto', cursive;
 }
 
 body h2 {
+  font-size: 1em;
+  font-family: 'Aboreto', cursive;
+}
+
+body h5 {
+  font-family: 'Aboreto', cursive;
   font-size: 1em;
 }
 
@@ -49,6 +70,7 @@ body .pedido {
   color: purple;
   border-color: purple;
   font-size: 1em;
+  font-family: 'DynaPuff', cursive;
 }
 
 body .pedido:hover {
@@ -66,6 +88,7 @@ body .burguers {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 30px;
+  font-family: 'DynaPuff', cursive;
 }
 
 body .burguers .card {
@@ -80,10 +103,26 @@ body .burguers .card .btn {
   background-color: white;
   color: purple;
   border-color: purple;
+  font-family: 'DynaPuff', cursive;
 }
 
 body .burguers .card .btn:hover {
   background-color: purple;
   color: white;
+}
+
+body footer {
+  background-color: #2b2f31;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body footer h3, body footer h4 {
+  color: white;
+  margin: 3px;
+  font-family: 'Aboreto', cursive;
 }
 /*# sourceMappingURL=style.css.map */
