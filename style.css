@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 5px;
+  text-align: center;
+}
+
+body .wpp {
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 20px;
+  text-decoration: none;
+  background-color: white;
+  width: 51px;
+  height: 57px;
+  border-radius: 55%;
+}
+
+body .wpp .fa-whatsapp {
+  font-size: 4em;
+  color: green;
+  position: absolute;
+}
+
+body h1 {
+  margin: 3px;
+}
+
+body h2 {
+  font-size: 1em;
+}
+
+body .pedido {
+  border: 1px solid #d54fd5;
+  border-radius: 5px;
+  padding: 3px;
+  text-decoration: none;
+  background-color: white;
+  color: purple;
+  border-color: purple;
+  font-size: 1em;
+}
+
+body .pedido:hover {
+  background-color: purple;
+  color: white;
+}
+
+body .burguers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px;
+}
+
+body .burguers .card {
+  max-width: 130px !important;
+  margin: 10px;
+  border-color: purple;
+  -webkit-box-shadow: rgba(240, 46, 170, 0.2) 2px 2px, rgba(240, 46, 170, 0.1) 5px 5px, rgba(240, 46, 170, 0.05) 10px 10px;
+          box-shadow: rgba(240, 46, 170, 0.2) 2px 2px, rgba(240, 46, 170, 0.1) 5px 5px, rgba(240, 46, 170, 0.05) 10px 10px;
+}
+
+body .burguers .card .btn {
+  background-color: white;
+  color: purple;
+  border-color: purple;
+}
+
+body .burguers .card .btn:hover {
+  background-color: purple;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
