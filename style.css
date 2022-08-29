@@ -36,6 +36,58 @@ body .wpp {
   border-radius: 55%;
 }
 
+body .wpp::before, body .wpp::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 0px);
+  height: calc(100% + 0px);
+  border: 2px solid #44bd32;
+  border-radius: 50%;
+  -webkit-animation: wpp 1.5s linear infinite;
+          animation: wpp 1.5s linear infinite;
+}
+
+body .wpp::after {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+@-webkit-keyframes wpp {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+@keyframes wpp {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
 body .wpp .fa-whatsapp {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -120,7 +172,8 @@ body footer {
       justify-content: space-around;
 }
 
-body footer h3, body footer h4 {
+body footer h3,
+body footer h4 {
   color: white;
   margin: 3px;
   font-family: 'Aboreto', cursive;
