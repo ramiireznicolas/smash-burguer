@@ -14,7 +14,8 @@ body {
   text-align: center;
 }
 
-body .d-block {
+body .carousel {
+  max-width: 500px;
   margin: auto;
 }
 
@@ -103,12 +104,14 @@ body h1 {
   font-family: 'Aboreto', cursive;
 }
 
-body h2 {
+body h3 {
   font-size: 1em;
   font-family: 'Aboreto', cursive;
+  margin-top: 10px;
 }
 
-body h5 {
+body h2,
+body h4 {
   font-family: 'Aboreto', cursive;
   font-size: 1em;
 }
@@ -141,6 +144,7 @@ body .burguers {
           justify-content: center;
   margin-top: 30px;
   font-family: 'DynaPuff', cursive;
+  position: relative;
 }
 
 body .burguers .card {
@@ -161,6 +165,64 @@ body .burguers .card .btn {
 body .burguers .card .btn:hover {
   background-color: purple;
   color: white;
+}
+
+body .burguers .card .modal_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  pointer-events: none;
+  left: 0;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  z-index: 99;
+}
+
+body .burguers .card .modal_container .modal_ {
+  background-color: #fff;
+  max-width: 600px;
+  padding: 30px 10px;
+  border-radius: 5px;
+  margin: auto 15px;
+  text-align: center;
+}
+
+body .burguers .card .modal_container .modal_ .carrito {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body .burguers .card .modal_container .modal_ .carrito .btn {
+  background-color: white;
+  color: purple;
+  border-color: purple;
+  font-family: 'DynaPuff', cursive;
+  width: auto;
+  margin: 5px;
+}
+
+body .burguers .card .modal_container .modal_ .carrito .btn:hover {
+  background-color: purple;
+  color: white;
+}
+
+body .burguers .card .open_close {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 body footer {
