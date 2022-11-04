@@ -19,17 +19,28 @@ body .carousel {
   margin: auto;
 }
 
-body .wpp {
+body .compra {
   position: fixed;
   bottom: 0;
   z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  margin: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+body .compra .verCarrito {
+  width: 50px;
+  height: 50px;
+  margin: 15px 25px;
+  cursor: pointer;
+}
+
+body .compra .wpp {
+  margin: 5px;
   text-decoration: none;
   background-color: green;
   width: 70px;
@@ -37,18 +48,19 @@ body .wpp {
   border-radius: 55%;
 }
 
-body .wpp::before, body .wpp::after {
+body .compra .wpp::before, body .compra .wpp::after {
   content: "";
   position: absolute;
-  width: calc(100% + 0px);
-  height: calc(100% + 0px);
+  width: calc(70px + 10px);
+  height: calc(70px + 10px);
   border: 2px solid #44bd32;
   border-radius: 50%;
   -webkit-animation: wpp 1.5s linear infinite;
           animation: wpp 1.5s linear infinite;
+  margin: -6px -40px;
 }
 
-body .wpp::after {
+body .compra .wpp::after {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
@@ -89,14 +101,14 @@ body .wpp::after {
   }
 }
 
-body .wpp .fa-whatsapp {
+body .compra .wpp .fa-whatsapp {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   font-size: 4em;
   color: white;
   position: absolute;
-  margin: 3px 0px 3px 7px;
+  margin: 3px 0px 3px -27px;
 }
 
 body h1 {
@@ -114,6 +126,10 @@ body h2,
 body h4 {
   font-family: 'Aboreto', cursive;
   font-size: 1em;
+}
+
+body h5 {
+  font-size: .9em;
 }
 
 body .pedido {
@@ -160,6 +176,7 @@ body .burguers .card .btn {
   color: purple;
   border-color: purple;
   font-family: 'DynaPuff', cursive;
+  font-size: 0.9em;
 }
 
 body .burguers .card .btn:hover {
@@ -206,20 +223,6 @@ body .burguers .card .modal_container .modal_ .carrito {
       justify-content: space-around;
 }
 
-body .burguers .card .modal_container .modal_ .carrito .btn {
-  background-color: white;
-  color: purple;
-  border-color: purple;
-  font-family: 'DynaPuff', cursive;
-  width: auto;
-  margin: 5px;
-}
-
-body .burguers .card .modal_container .modal_ .carrito .btn:hover {
-  background-color: purple;
-  color: white;
-}
-
 body .burguers .card .open_close {
   opacity: 1;
   pointer-events: auto;
@@ -234,10 +237,10 @@ body footer {
       justify-content: space-around;
 }
 
-body footer h3,
-body footer h4 {
+body footer p {
   color: white;
-  margin: 3px;
+  font-size: 1em;
   font-family: 'Aboreto', cursive;
+  margin: 5px 0 10px;
 }
 /*# sourceMappingURL=style.css.map */

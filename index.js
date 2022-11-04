@@ -51,3 +51,5 @@ triple.addEventListener('click', () => {
 cerrarTriple.addEventListener('click', () => {
     modalTriple.classList.remove('open_close');
 });
+
+//Agregar al carrito
