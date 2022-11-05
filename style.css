@@ -111,6 +111,119 @@ body .compra .wpp .fa-whatsapp {
   margin: 3px 0px 3px -27px;
 }
 
+body .cart {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  min-height: 100vh;
+  padding: 10px;
+  background-color: white;
+  -webkit-box-shadow: -2px 0 4px #5f3e3e;
+          box-shadow: -2px 0 4px #5f3e3e;
+  z-index: 11;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .cart .cart-title {
+  text-align: center;
+  margin-top: 15px;
+}
+
+body .cart .cart-box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 32% 50% 18%;
+      grid-template-columns: 32% 50% 18%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+  border: 1px solid #2b2f31;
+  padding: 5px;
+}
+
+body .cart .cart-box .cart-img {
+  width: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+body .cart .cart-box .detail-box {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 0.5rem;
+}
+
+body .cart .cart-box .detail-box .cart-product-tittle {
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+body .cart .cart-box .detail-box .cart-price {
+  font-weight: 500;
+}
+
+body .cart .cart-box .detail-box .cart-quantity {
+  border: 1px solid black;
+  outline-color: red;
+  width: 2.4rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+body .cart .cart-box .cart-remove {
+  font-size: 24px;
+  cursor: pointer;
+  color: #fd4545;
+}
+
+body .cart .total {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 1rem;
+  border-top: 1px solid black;
+}
+
+body .cart .total .total-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+body .cart .total .total-price {
+  margin-left: 10px;
+}
+
+body .cart .btn-buy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1.5rem auto;
+  border: none;
+  background-color: #26d879;
+}
+
+body .cart .btn-buy:hover {
+  background: #11a757;
+}
+
+body .cart #close-cart {
+  position: absolute;
+  top: 1rem;
+  right: 0.8rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+body .cart.active {
+  right: 0;
+}
+
 body h1 {
   margin: 3px;
   font-family: 'Aboreto', cursive;
@@ -171,12 +284,21 @@ body .burguers .card {
           box-shadow: rgba(240, 46, 170, 0.2) 2px 2px, rgba(240, 46, 170, 0.1) 5px 5px, rgba(240, 46, 170, 0.05) 10px 10px;
 }
 
+body .burguers .card .card-body {
+  padding: 0;
+}
+
+body .burguers .card .card-body .product-title {
+  margin-top: 10px;
+}
+
 body .burguers .card .btn {
   background-color: white;
   color: purple;
   border-color: purple;
   font-family: 'DynaPuff', cursive;
   font-size: 0.9em;
+  margin: 5px;
 }
 
 body .burguers .card .btn:hover {
@@ -213,14 +335,6 @@ body .burguers .card .modal_container .modal_ {
   border-radius: 5px;
   margin: auto 15px;
   text-align: center;
-}
-
-body .burguers .card .modal_container .modal_ .carrito {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
 }
 
 body .burguers .card .open_close {

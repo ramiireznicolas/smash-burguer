@@ -17,28 +17,30 @@ body {
         margin: auto;
     }
 
-    .compra{
+    //logo de wpp
+    .compra {
         position: fixed;
         bottom: 0;
         z-index: 10;
         display: flex;
         justify-content: space-between;
         width: 100%;
-        
-        .verCarrito{
+
+        .verCarrito {
             width: 50px;
             height: 50px;
             margin: 15px 25px;
             cursor: pointer;
         }
-        .wpp {  
+
+        .wpp {
             margin: 5px;
             text-decoration: none;
             background-color: green;
             width: 70px;
             height: 70px;
             border-radius: 55%;
-    
+
             &::before,
             &::after {
                 content: "";
@@ -50,28 +52,28 @@ body {
                 animation: wpp 1.5s linear infinite;
                 margin: -6px -40px;
             }
-    
+
             &::after {
                 animation-delay: 0.4s;
             }
-    
+
             @keyframes wpp {
                 0% {
                     transform: scale(0.5);
                     opacity: 0;
                 }
-    
+
                 50% {
                     transform: scale(1);
                     opacity: 1;
                 }
-    
+
                 100% {
                     transform: scale(1.4);
                     opacity: 0;
                 }
             }
-    
+
             .fa-whatsapp {
                 align-items: center;
                 font-size: 4em;
@@ -82,26 +84,114 @@ body {
         }
     }
 
+    //carrito del shop
+    .cart{
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        min-height: 100vh;
+        padding: 10px;
+        background-color: white;
+        box-shadow: -2px 0 4px rgb(95, 62, 62);
+        z-index: 11;
+        transition: 0.3s;
+        .cart-title{
+            text-align: center;
+            margin-top: 15px;
+        }
+        .cart-box{
+            display: grid;
+            grid-template-columns: 32% 50% 18%;
+            align-items: center;
+            margin-top: 10px;
+            border: 1px solid #2b2f31;
+            padding: 5px;
+            .cart-img{
+                width: 50px;
+                object-fit: contain;
+            }
+            .detail-box{
+                display: grid;
+                row-gap: 0.5rem;
+                .cart-product-tittle{
+                    text-transform: uppercase;
+                    font-size: 1em;
+                }
+                .cart-price{
+                    font-weight: 500;
+                }
+                .cart-quantity{
+                    border: 1px solid black;
+                    outline-color: red;
+                    width: 2.4rem;
+                    text-align: center;
+                    font-size: 1rem;
+                }
+            }
+            .cart-remove{
+                font-size: 24px;
+                cursor: pointer;
+                color: rgb(253, 69, 69);
+            }
+        }
+        .total{
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 1rem;
+            border-top: 1px solid black;
+            .total-title{
+                font-size: 16px;
+                font-weight: 600;
+            }
+            .total-price{
+                margin-left: 10px;
+            }
+        }
+        .btn-buy{
+            display: flex;
+            margin: 1.5rem auto;
+            border: none;
+            background-color: rgb(38, 216, 121);
+            &:hover{
+                background: rgb(17, 167, 87);
+            }
+        }
+        #close-cart{
+            position: absolute;
+            top: 1rem;
+            right: 0.8rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+    }
+    .cart.active{
+        right: 0;
+    }
+
 
     h1 {
         margin: 3px;
         font-family: 'Aboreto', cursive;
     }
-    h3{
+
+    h3 {
         font-size: 1em;
         font-family: 'Aboreto', cursive;
         margin-top: 10px;
     }
+
     h2,
-    h4 {
+    h4{
         font-family: 'Aboreto', cursive;
         font-size: 1em;
     }
 
-    h5{
+    h5 {
         font-size: .9em;
     }
 
+    //api wpp
     .pedido {
         border: 1px solid rgb(213, 79, 213);
         border-radius: 5px;
@@ -119,6 +209,7 @@ body {
         }
     }
 
+    //shop hamburguesas
     .burguers {
         display: flex;
         flex-wrap: wrap;
@@ -132,23 +223,30 @@ body {
             margin: 10px;
             border-color: purple;
             box-shadow: rgba(240, 46, 170, 0.2) 2px 2px, rgba(240, 46, 170, 0.1) 5px 5px, rgba(240, 46, 170, 0.05) 10px 10px;
-
+            .card-body{
+                padding: 0;
+                .product-title{
+                    margin-top: 10px;
+                }
+            }
             .btn {
                 background-color: white;
                 color: purple;
                 border-color: purple;
                 font-family: 'DynaPuff', cursive;
                 font-size: 0.9em;
+                margin: 5px;
 
                 &:hover {
                     background-color: purple;
                     color: white;
                 }
             }
+
             //?VENTANAS EMERGENTES
             .modal_container {
                 display: flex;
-               position: fixed;
+                position: fixed;
                 width: 100%;
                 height: 100vh;
                 background-color: rgba(0, 0, 0, 0.7);
@@ -168,17 +266,15 @@ body {
                     border-radius: 5px;
                     margin: auto 15px;
                     text-align: center;
-
-                    .carrito {
-                        display: flex;
-                        justify-content: space-around;                   
-                    }
                 }
             }
+
             .open_close {
                 opacity: 1;
                 pointer-events: auto;
-            }//?FIN EMERGENTES
+            }
+
+            //?FIN EMERGENTES
         }
     }
 
@@ -186,7 +282,8 @@ body {
         background-color: #2b2f31;
         display: flex;
         justify-content: space-around;
-        p{
+
+        p {
             color: white;
             font-size: 1em;
             font-family: 'Aboreto', cursive;
