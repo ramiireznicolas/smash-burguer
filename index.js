@@ -45,12 +45,13 @@ function ready() {
 };
 
 //boton de compra
-function buyButtonClicked(){
+function buyButtonClicked() {
     alert("Tú pedido ya esta realizado")
-    let cartContent = document.getElementsByClassName("cart-conten")[0];
-    while (cartContent.hasChildNodes()){
-    cartContent.removeChild(cartContent.firstChild);
+    let cartContent = document.getElementsByClassName("cart-content")[0];
+    while (cartContent.hasChildNodes()) {
+        cartContent.removeChild(cartContent.firstChild);
     }
+    updatetotal();
 }
 
 function removeCartItem(event) {
@@ -85,7 +86,7 @@ function addProductToCart(title, price, productImg) {
     let cartItems = document.getElementsByClassName("cart-content")[0];
     let cartItemsName = cartItems.getElementsByClassName("cart-product-tittle");
     for (let i = 0; i < cartItemsName.length; i++) {
-        if (cartItemsName[i].innerText == title){
+        if (cartItemsName[i].innerText == title) {
             alert("Haz agregado la burguer al carrito");
             return;
         };
@@ -98,10 +99,10 @@ function addProductToCart(title, price, productImg) {
                             <input type="number" value="1" class="cart-quantity">
                         </div>
                         <i class="fa-solid fa-trash cart-remove"></i> `;
-cartShopBox.innerHTML = cartBoxContent;
-cartItems.append(cartShopBox);
-cartShopBox.getElementsByClassName("cart-remove")[0].addEventListener("click", removeCartItem);
-cartShopBox.getElementsByClassName("cart-quantity")[0].addEventListener("change", quantityChanged);
+    cartShopBox.innerHTML = cartBoxContent;
+    cartItems.append(cartShopBox);
+    cartShopBox.getElementsByClassName("cart-remove")[0].addEventListener("click", removeCartItem);
+    cartShopBox.getElementsByClassName("cart-quantity")[0].addEventListener("change", quantityChanged);
 };
 
 
@@ -118,11 +119,11 @@ function updatetotal() {
         let price = parseFloat(priceElement.innerText.replace("$", ""));
         let quantity = quantityElement.value;
         total = total + price * quantity;
-        //si el precio es con decimales
-        total = Math.round(total * 100) / 100;
-
-        document.getElementsByClassName("total-price")[0].innerText = "$" + total;
     };
+    //si el precio es con decimales
+    total = Math.round(total * 100) / 100;
+
+    document.getElementsByClassName("total-price")[0].innerText = "$" + total;
 };
 
 //!VENTANAS MODALS
@@ -178,4 +179,24 @@ triple.addEventListener('click', () => {
 });
 cerrarTriple.addEventListener('click', () => {
     modalTriple.classList.remove('open_close');
+});
+
+const slash = document.getElementById("slash");
+const modalSlash = document.getElementById("modalSlash");
+const cerrarSlash = document.getElementById("cerrarSlash");
+slash.addEventListener('click', () => {
+    modalSlash.classList.add('open_close');
+});
+cerrarSlash.addEventListener('click', () => {
+    modalSlash.classList.remove('open_close');
+});
+
+const freddy = document.getElementById("freddy");
+const modalFreddy = document.getElementById("modalFreddy");
+const cerrarFreddy = document.getElementById("cerrarFreddy");
+freddy.addEventListener('click', () => {
+    modalFreddy.classList.add('open_close');
+});
+cerrarTriple.addEventListener('click', () => {
+    modalFreddy.classList.remove('open_close');
 });

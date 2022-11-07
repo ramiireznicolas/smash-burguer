@@ -13,11 +13,11 @@ body {
     text-align: center;
 
     .carousel {
-        max-width: 500px;
+        max-width: 600px;
         margin: auto;
     }
 
-    //logo de wpp
+    //logo de wpp y logo carrito
     .compra {
         position: fixed;
         bottom: 0;
@@ -25,7 +25,7 @@ body {
         display: flex;
         justify-content: space-between;
         width: 100%;
-
+        //logo carrito
         .verCarrito {
             width: 50px;
             height: 50px;
@@ -108,7 +108,7 @@ body {
             border: 1px solid #2b2f31;
             padding: 5px;
             .cart-img{
-                width: 50px;
+                width: 80px;
                 object-fit: contain;
             }
             .detail-box{
@@ -219,7 +219,7 @@ body {
         position: relative;
 
         .card {
-            max-width: 130px !important;
+            max-width: 180px !important;
             margin: 10px;
             border-color: purple;
             box-shadow: rgba(240, 46, 170, 0.2) 2px 2px, rgba(240, 46, 170, 0.1) 5px 5px, rgba(240, 46, 170, 0.05) 10px 10px;
@@ -236,6 +236,9 @@ body {
                 font-family: 'DynaPuff', cursive;
                 font-size: 0.9em;
                 margin: 5px;
+                .fa-cart-shopping{
+                    width: 25px;
+                }
 
                 &:hover {
                     background-color: purple;
@@ -258,6 +261,7 @@ body {
                 top: 0;
                 opacity: 0;
                 z-index: 99;
+                transition: 0.3s;
 
                 .modal_ {
                     background-color: #fff;
