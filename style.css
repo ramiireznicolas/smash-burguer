@@ -16,7 +16,13 @@ body {
 
 body .carousel {
   max-width: 600px;
+  max-height: 320px;
   margin: auto;
+}
+
+body .carousel img {
+  max-width: 600px;
+  max-height: 320px;
 }
 
 body .compra {
@@ -199,17 +205,66 @@ body .cart .total .total-price {
   margin-left: 10px;
 }
 
-body .cart .btn-buy {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 1.5rem auto;
+body .cart .cta {
   border: none;
-  background-color: #26d879;
+  background: none;
 }
 
-body .cart .btn-buy:hover {
-  background: #11a757;
+body .cart .cta .hover-underline-animation {
+  position: relative;
+  color: black;
+  padding-bottom: 20px;
+}
+
+body .cart .cta .hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #11a757;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+body .cart .cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+body .cart .cta svg {
+  -webkit-transform: translateX(-8px);
+          transform: translateX(-8px);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+body .cart .cta:hover svg {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  color: #11a757;
+}
+
+body .cart .cta:active svg {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+body .cart .cta:hover .hover-underline-animation:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 
 body .cart #close-cart {
